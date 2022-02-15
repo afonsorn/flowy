@@ -1,8 +1,9 @@
 :root{
     --nav-h: 50px;
-    --f-gap: 0rem;
     --color-nav: #c8c8c8;
     --color-nav-h: #b8b8b8;
+    --color-drop-menu: #ffffff;
+    --color-drop-menu-h: #c8c8c8;
 }
 
 *,
@@ -34,40 +35,117 @@ select{
 /* --- NAV --- */
 
 .nav{
-    padding: .5rem 2rem;
+    padding: 0 2rem;
     height: var(--nav-h);
     background-color: var(--color-nav);
 }
 
 .logo{
+    /* height: calc(var(--nav-h) - 1rem); */
+    padding: .5rem;
+}
+
+.logo > img{
     height: 100%;
 }
 
 .flexcontainer{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.tabs{
+.m-tabs{
     list-style: none;
     height: 100%;
     align-items: center;
     justify-content: flex-end;
-    gap: var(--f-gap);
 }
 
-.tabs > li{
-    padding: auto;
-}
-
-.tabs > li > a{
-    padding: 1rem;
+.m-tabs > li{
     height: 100%;
+}
+
+.m-tabs > li > a{
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
     color: inherit;
     text-decoration: none;
 }
 
-.tabs > li > a:hover{
+.m-tabs > li > a:hover{
     background-color: var(--color-nav-h);
+}
+
+.m-list{
+    list-style: none;
+    width: 100%;
+    padding: 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    font-size: larger;
+}
+
+.m-list > li{
+    width: 100%;
+    display: flex;
+}
+
+.m-list > li > a{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.m-list > li > a:hover{
+    background-color: var(--color-drop-menu-h);
+}
+
+#menu-btn{
+    display: none;
+    padding: .25rem;
+    border-radius: 5px;
+    background-color: var(--color-nav);
+    justify-content: flex-end;
+    align-items: center;
+    transition: .2s;
+    cursor:pointer
+}
+
+#menu-btn:hover{
+    background-color: var(--color-nav-h);
+    transition: .2s;
+}
+
+#drop-menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - var(--nav-h));
+    left: 0;
+    top: var(--nav-h);
+    background-color: var(--color-drop-menu);
+}
+#drop-menu.open{
+    display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+    #menu-btn {
+        display: flex;
+    }
+    .m-tabs{
+        display: none;
+    }
 }
 
 /* --- BODY --- */
