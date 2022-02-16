@@ -153,7 +153,7 @@ select{
 .imgbox{
     height: calc(100vh - var(--nav-h));
     width: 100%;
-    background-image: url("media/tap2.jpg");
+    background-image: url("../media/tap2.jpg");
     background-size: cover;
     background-position: center;
 }
