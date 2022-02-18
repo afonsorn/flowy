@@ -1,38 +1,874 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowy</title>
-    <link rel="icon" href="/media/flowyF.png" type="image/gif" />
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Flowy ">
+
+	<meta name="author" content="Muhammad Morshed">
+
+	<title>Flowy</title>
+
+	<!-- Mobile Specific Meta
+		================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/images/flowyF.png" type="image/gif" />
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" /> -->
+
+	<!-- CSS
+		================================================== -->
+	<!-- Fontawesome Icon font -->
+	<link rel="stylesheet" href="plugins/themefisher-font/style.css">
+	<!-- bootstrap.min css -->
+	<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="plugins/animate-css/animate.css">
+	<!-- Magnific popup css -->
+	<link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+	<!-- Slick Carousel -->
+	<link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+
+
 </head>
-<body>
-    <nav class="nav flex">
-        <a href="/" class="logo"><img src="/media/flowy.png" alt="logo"></a>
-        <div class="flexcontainer">
-            <ul class="m-tabs flex">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contactos</a></li>
-            </ul>
-            <a id="menu-btn" onclick="toggleMenu()">
-                <img src="/media/menu_icon.svg" alt="menu">
-            </a>
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!--
+	    Start Preloader
+	    ==================================== -->
+	<div class="preloader">
+		<div class="sk-cube-grid">
+			<div class="sk-cube sk-cube1"></div>
+			<div class="sk-cube sk-cube2"></div>
+			<div class="sk-cube sk-cube3"></div>
+			<div class="sk-cube sk-cube4"></div>
+			<div class="sk-cube sk-cube5"></div>
+			<div class="sk-cube sk-cube6"></div>
+			<div class="sk-cube sk-cube7"></div>
+			<div class="sk-cube sk-cube8"></div>
+			<div class="sk-cube sk-cube9"></div>
+		</div>
+	</div>
+	<!-- End Preloader
+        ==================================== -->
+
+ <!--
+Welcome Slider
+==================================== -->
+
+<section class="hero-area overlay" style="background-image: url('images/banner/hero-area.jpg');">
+	<!-- <video autoplay muted loop class="hero-video">
+		<source src="images/banner/hero-video.mp4" type="video/mp4">
+	</video> -->
+	<div class="block">
+		<div class="video-button">
+			<a class="popup-video" href="https://www.youtube.com/watch?v=DoeAY8GQU8g?auplay=1">
+				<i class="tf-ion-play"></i>
+		</a>
+		</div>
+		<h1>Experimenta a nova realidade</h1>
+		<p>Sentes que cada vez que queres usar àgua quente nas tuas torneiras ou mesmo nos teus banhos estás a desperdiçar toda aquela água que sai da toneira? Então temos a solução para ti!</p>
+		<a data-scroll href="#sobre" class="btn btn-transparent">Descobre Mais</a>
+	</div>
+</section>
+
+ <!-- 
+  Fixed Navigation
+  ==================================== -->
+    <header id="navigation" class="navbar navigation">
+        <div class="container">
+            <div class="navbar-header">
+              <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- /responsive nav button -->
+    
+                <!-- logo -->
+                <a class="navbar-brand logo" href="#body">
+					<img src="images/logo.png" alt="" style="margin-top: 7px;">
+                    <!-- <img src="images/logo.png" alt="Website Logo" /> -->
+                    <!-- <svg width="40px" height="40px" viewBox="0 0 45 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Group" transform="translate(2.000000, 2.000000)" stroke="#57CBCC" stroke-width="3">
+                                <ellipse id="Oval" cx="20.5" cy="20" rx="20.5" ry="20"></ellipse>
+                                <path d="M6,7 L33.5,34.5" id="Line-2" stroke-linecap="square"></path>
+                                <path d="M21,20 L34,7" id="Line-3" stroke-linecap="square"></path>
+                            </g>
+                        </g>
+                    </svg>-->
+                </a>
+            <!-- /logo -->
         </div>
-        <div id="drop-menu" class="">
-            <ul class="m-list flex">
-                <li><a onclick="toggleMenu()" href="#">Início</a></li>
-                <li><a onclick="toggleMenu()" href="#">Produtos</a></li>
-                <li><a onclick="toggleMenu()" href="#">Sobre</a></li>
-                <li><a onclick="toggleMenu()" href="#">Contactos</a></li>
+
+        <!-- main nav -->
+        <nav class="collapse navbar-collapse navbar-right" role="Navigation">
+            <ul id="nav" class="nav navbar-nav navigation-menu">
+                <li><a data-scroll href="#body">Home</a></li>
+                <li><a data-scroll href="#sobre">Sobre</a></li>
+                <li><a data-scroll href="#objetivos">Objetivos</a></li>
+              <!--  <li><a data-scroll href="#portfolio">Portfolio</a></li> -->
+                <li><a data-scroll href="#equipa">Equipa</a></li>
+              <!--   <li><a data-scroll href="#pricing">Pricing</a></li> -->
+               <!--  <li><a data-scroll href="#blog">Blog</a></li> -->
+                <li><a data-scroll href="#contactos">Contatos</a></li>
             </ul>
-        </div>
-    </nav>
-    <div class="imgbox">
-    </div>
-</body>
+        </nav>
+        <!-- /main nav -->
+  
+      </div>
+  </header>
+  <!--
+  End Fixed Navigation
+  ==================================== -->
+
+<!--
+		Start About Section
+		==================================== -->
+		<section class="bg-one about section">
+			<div class="container">
+				<div class="row">
+				
+					<!-- section title -->
+					<div class="title text-center wow fadeIn" data-wow-duration="1500ms" >
+						<h2>About <span class="color">Flowy</span> </h2>
+						<div class="border"></div>
+					</div>
+					<!-- /section title -->
+					
+					<!-- About item -->
+					<div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" >
+						<div class="block">							
+							<div class="icon-box">
+								<i class="tf-tools"></i>
+							</div>					
+							<!-- Express About Yourself -->
+							<div class="content text-center">
+								<h3 class="ddd">Design Simples</h3>								
+								<p>O flowy conta com um design simples e de fácil compreensão, de modo a ter um funcionamento perceptivel, transparente e elegante</p>
+							</div>
+						</div>
+					</div> 
+					<!-- End About item -->
+					
+					<!-- About item -->
+					<div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
+						<div class="block">
+							<div class="icon-box" style="padding:10px">
+								<img src="images/icons/instal.svg"  /></img>
+							</div>
+							<!-- Express About Yourself -->
+							<div class="content text-center">
+								<h3>Fácil instalação</h3>
+								<p>O Flowy apresenta uma interface fácil e intuitiva de modo a possibilitar a fácil instalação e manuntenção do produto</p>
+							</div>
+						</div>
+					</div> 
+					<!-- End About item -->
+					
+					<!-- About item -->					
+					<div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+						<div class="block kill-margin-bottom">
+							<div class="icon-box" style="padding:10px">
+								<img src="images/icons/waterwaste.svg"  /></img>
+							</div>
+							<!-- Express About Yourself -->
+							<div class="content text-center">
+								<h3>Evita desperdícios</h3>
+								<p>Através do redirecionamento de água o Flowy é capaz de evitar que a àgua por aquecer seja despejada para o esgoto desperdiçada</p>
+							</div>
+						</div>
+					</div> 
+					<!-- End About item -->
+					
+				</div> 		<!-- End row -->
+			</div>   	<!-- End container -->
+		</section>   <!-- End section -->
+<div id="sobre" style="margin-bottom: 70px;margin-top: -100px;"></div>
+<section class="section about-2 padding-0 bg-dark" >
+	<div class="container-fluid"  >
+		<div class="row">
+			<div class="col-md-7 padding-0 " style="display:flex;justify-items:center;align-items:center">
+				<img class="img-responsive" src="images/about/prototipo.png" alt="">
+			</div>
+			<div class="col-md-5">
+				<div class="content-block">
+					<h2>Um produto de qualidade.</h2>
+					<p>O flowy através da sua forma revolucionária permite o encaminhamento eficiente e prática da água ainda por aquecer.</p>
+					<p>O equipamento analisa a temperatura da água de modo a redirecionar o fluxo adequadamente.</p>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="media">
+								<div class="pull-left">
+									<i class="tf-circle-compass"></i>	
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Fácil Costumização</h4>
+									<p>Produto concebido de forma a facilmente se adaptar a uma vasta variedade de torneiras e equipamentos</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="media">
+								<div class="pull-left">
+									<i class="tf-hotairballoon"></i>	
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Transporte prático</h4>
+									<p>O peso leve do produto permite que o seu armazenamento e transporte sejam uma vantagem na deslocação</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--
+Start Call To Action
+==================================== -->
+<section class="call-to-action section-sm bg-1 overly">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>Tens uma opinião sobre o design?</h2>
+				<p>Se tens uma ideia para melhorar o design e funcionamento do nosso produto envia-nos uma proposta! Entrare-mos em contacto.</p>
+				<a href="#contactos" class="btn btn-main">Entrar em contacto</a>
+			</div>
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+
+<!-- Start Services Section
+==================================== -->
+
+<section id="objetivos" class="bg-one section">
+	<div class="container">
+		<div class="row">
+			
+			<!-- section title -->
+			<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+				<h2>Os nossos <span class="color">Objetivos</span></h2>
+				<div class="border"></div>
+			</div>
+			<!-- /section title -->
+			
+            <!-- Single Service Item -->
+			<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<i class="tf-globe"></i>
+					</div>
+					<h3>Sensibilização Global</h3>
+					<p>Queremos mostrar ao mundo que é possivel o não desperdicio de água mantendo toda a comodidade e eficiência na espera pela água quente.</p>
+				</div>
+			</article>
+            <!-- End Single Service Item -->
+            
+            <!-- Single Service Item -->
+			<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<i class="tf-ion-laptop"></i>
+					</div>
+					<h3>Brio e elegância</h3>
+					<p>Através de um design elegante e inovador pretendemos que os nossos produtos se misturem e integrem facilmente no local onde sejam instalados.</p>
+				</div>
+			</article>
+            <!-- End Single Service Item -->
+            
+            <!-- Single Service Item -->
+			<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<i class="tf-lightbulb"></i>
+					</div>
+					<h3>Inovação</h3>
+					<p>Apresentamos um produto inovador que se encontra em continua inovação e evolução, de modo a resolver problemas da atualidade.</p>
+				</div>
+			</article>
+			<!-- End Single Service Item -->
+			
+			<!-- Single Service Item -->
+			<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<i class="tf-ion-waterdrop"></i>
+					</div>
+					<h3>Reserva de Recursos Naturais</h3>
+					<p>Com a maior utilização do nosso produto contamos esperamos um impacto drástico no desperdicio de água que acontece atualmente.</p>
+				</div>
+			</article>
+			<!-- End Single Service Item -->
+			
+			<!-- Single Service Item -->
+			<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<i class="tf-ion-happy"></i>
+					</div>
+					<h3>Satisfação do Cliente</h3>
+					<p>Consideramos e resolvemos as necessidades do nosso mercado de modo a obter sempre a satisfação de todos os nossos clientes.</p>
+				</div>
+			</article>
+			<!-- End Single Service Item -->
+			
+			<!-- Single Service Item -->
+			<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="600ms">
+				<div class="service-block text-center kill-margin-bottom">
+					<div class="service-icon text-center">
+						<i class="tf-ion-ios-partlysunny-outline"></i>
+					</div>
+					<h3>Sustentabilidade Ambiental</h3>
+					<p>Através da escolha responsável e sustentável de materiais nos nossos produtos pretendemos contribuir na diminuição do impacto ambiental.</p>
+				</div>
+			</article>
+			<!-- End Single Service Item -->
+				
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+	
+
+<!-- Start Team Skills
+		=========================================== -->
+		
+		<section id="crecimento" class="parallax-section section section-bg overly">
+			<div class="container">
+				<div class="row" >
+					<!-- section title -->
+					<div class="col-md-12">
+						<div class="title text-center">
+							<h2>Mercado e <span class="color">Crescimento</span></h2>
+							<div class="border"></div>
+						</div>
+					</div>
+					<!-- /section title -->
+				</div>  		<!-- End row -->
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Acreditamos no crescimento do nosso<br>
+							valor de mercado por base na qualidade do nosso produto.</h2>
+							<p>Cerca de 30.000 habitações são construidas todos os anos em portugal, consideramos que o Flowy será uma integração importante e crucial na extrutura destes edificios. <br/> Deste modo é esperado um crescimento acima dos 90% ao fim do primeiro ano no mercado</p>
+							<!--<img class="img-responsive" src="images/about/company-growth.png" alt="">-->
+					</div>
+					<div class="col-md-6">
+						<ul class="skill-bar">
+							<li>
+								<p><span>01-</span> Donos de Obra</p>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100" style="width:70%">
+									</div>
+								</div>
+							</li>
+							<li>
+								<p><span>02-</span> Superficies de Retalho</p>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100" style="width:25%">
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<p><span>03-</span> Cliente Final </p>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100" style="width:5%">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>   	<!-- End container -->
+		</section>   <!-- End section -->
+
+
+<!-- Portfolio Section-->
+
+<!--
+Start Counter Section
+==================================== -->
+		
+<section id="counter" class="parallax-section bg-1 section overly">
+	<div class="container">
+		<div class="row">
+		
+			<!-- first count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms">
+				<div class="counters-item">
+					<i class="tf-ion-android-happy"></i>
+					<span data-speed="3000" data-to="24">24</span>
+					<h3>Clientes Satisfeitos</h3>
+				</div>
+			</div>
+			<!-- end first count item -->
+		
+			<!-- second count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+				<div class="counters-item">
+					<i class="tf-ion-waterdrop"></i>
+					<span data-speed="3000" data-to="4380">4 380</span>
+					<h3>Litros economizados p/ano</h3>
+				</div>
+			</div>
+			<!-- end second count item -->
+		
+			<!-- third count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+				<div class="counters-item">
+					<i class="tf-ion-ios-clock"></i>
+					<span data-speed="3000" data-to="142">142</span>
+					<h3>Horas Investidas</h3>
+					
+				</div>
+			</div>
+			<!-- end third count item -->
+			
+			<!-- fourth count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+				<div class="counters-item kill-margin-bottom">
+					<i class="tf-ion-coffee"></i>
+					<span data-speed="3000" data-to="36">36</span>
+					<h3>Chavenas de Café</h3>
+				</div>
+			</div>
+			<!-- end fourth count item -->
+			
+		</div> 		<!-- end row -->
+	</div>   	<!-- end container -->
+</section>   <!-- end section -->
+
+<!-- 
+Start Our Team
+=========================================== -->
+
+<section id="equipa" class="section">
+	<div class="container">
+		<div class="row">
+		
+			<!-- section title -->
+			<div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+				<h2>A <span class="color">Equipa</span></h2>
+				<div class="border"></div>
+			</div>
+			<!-- /section title -->
+			
+
+			<div class="row" style="display:flex;justify-content:center">
+
+			
+
+			<!-- team member -->
+			<div class="col-md-2 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-1.png" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-instagram-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>João Pinto</h4>
+						<span>CEO</span>
+						<p>João Pinto, 24 anos, natural de Castelo Branco e estudante de MIEC na FCT NOVA.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+				   
+               </div>
+            </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-2 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-2.png" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-instagram-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Afonso Nascimento</h4>
+						<span>CTO</span>
+						<p>Afonso Nascimento, 22 anos, natural de Lisboa e estudante no MIEI na FCT NOVA.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+				</div>
+            </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-2 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-3.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-instagram-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Rodrigo Nunes</h4>
+						<span>CCO</span>
+						<p>Rodrigo Nunes, 22 anos, natural de Lisboa e estudante de MIEC na FCT NOVA.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+               </div>
+            </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-2 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-4.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-instagram-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>José Coimbra</h4>
+						<span>CMO</span>
+						<p>José Coimbra, 22 anos, natural de Lisboa e estudante no MIEI na FCT NOVA.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+               </div>
+            </div>
+			<!-- end team member -->
+
+			<!-- team member -->
+			<div class="col-md-2 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+				<div class="team-member">
+						<div class="member-photo">
+							<!-- member photo -->
+							<img class="img-responsive" src="images/team/team-5.jpg" alt="Meghna">
+							<!-- /member photo -->
+							
+							<!-- member social profile -->
+							<div class="mask">
+								<ul class="list-inline">
+									<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+									<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+									<li><a href="#"><i class="tf-ion-social-instagram-outline"></i></a></li>
+								</ul>
+							</div>
+							<!-- /member social profile -->
+						</div>
+						
+						<!-- member name & designation -->
+						<div class="member-meta">
+							<h4>Diogo Cotrim de Sousa</h4>
+							<span>CFO</span>
+							<p>Diogo Cotrim de Sousa, 22 anos, natural de Lisboa e estudante de MIEC na FCT NOVA.</p>
+						</div>
+						<!-- /member name & designation -->
+						<!-- /about member -->
+				</div>
+				</div>
+				<!-- end team member -->
+			</div>
+			
+		</div>  	<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+		
+
+
+<!-- Start Testimonial
+		=========================================== -->
+
+<section id="testimonial" class="testimonial overly section bg-2">
+	<div class="container">
+		<div class="row">				
+			<div class="col-lg-12">
+				<!-- testimonial wrapper -->
+				<div id="testimonials" class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
+				
+					<!-- testimonial single -->
+					<div class="item text-center">
+						
+						<!-- client photo -->
+						<div class="client-thumb">
+							<img src="images/team/client-1.jpg" class="img-responsive" alt="Meghna">
+						</div>
+						<!-- /client photo -->
+						
+						<!-- client info -->
+						<div class="client-info">
+							<div class="client-meta">
+								<h3>Professor Doutor António Carmona Rodrigues</h3>
+								<span>Ex-Ministro das Obras Públicas (2003-2004), Presidente da CML (2005-2007)</span>
+							</div>
+							<div class="client-comment">
+								<p>"O projecto agora apresentado visa justamente aproveitar volumes de água, em vez de os desperdiçar, possibilitando o seu armazenamento para uma utilização posterior." </p>
+							</div>
+						</div>
+						<!-- /client info -->
+					</div>
+					<!-- /testimonial single -->
+					
+					<!-- testimonial single -->
+					<div class="item text-center">
+						
+						<!-- client photo -->
+						<div class="client-thumb">
+							<img src="images/team/client-1.jpg" class="img-responsive" alt="Meghna">
+						</div>
+						<!-- /client photo -->
+						
+						<!-- client info -->
+						<div class="client-info">
+							<div class="client-meta">
+								<h3>Professor Doutor António Carmona Rodrigues</h3>
+								<span>Ex-Ministro das Obras Públicas (2003-2004), Presidente da CML (2005-2007)</span>
+							</div>
+							<div class="client-comment">
+								<p>"O projecto agora apresentado visa justamente aproveitar volumes de água, em vez de os desperdiçar, possibilitando o seu armazenamento para uma utilização posterior." </p>
+							</div>
+						</div>
+						<!-- /client info -->
+					</div>
+					<!-- /testimonial single -->
+				
+					
+				
+					
+				</div>		<!-- end testimonial wrapper -->
+			</div> 		<!-- end col lg 12 -->
+		</div>	    <!-- End row -->
+	</div>       <!-- End container -->
+</section>    <!-- End Section -->
+
+<!-- Blog Section Here -->
+
+<!-- Srart Contact Us
+=========================================== -->		
+<section id="contactos" class="contact-us section-bg">
+	<div class="container">
+		<div class="row">
+			
+			<!-- section title -->
+			<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+				<h2>Entra em <span class="color">Contacto</span></h2>
+				<div class="border"></div>
+			</div>
+			<!-- /section title -->
+			
+			<!-- Contact Details -->
+			<div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
+				<h3>Detalhes de Contacto</h3>
+				<p>Temns alguma dúvida ou sugestão que queiras deixar à equipa de desenvolvimento do Flowy? Entra em contacto conosco </p>
+				<div class="contact-details">
+					<div class="con-info clearfix">
+						<i class="tf-map-pin"></i>
+						<span>Faculdade de Ciências e Tecnologia, Universidade Nova de Lisboa</span>
+					</div>
+					<!--
+					<div class="con-info clearfix">
+						<i class="tf-ion-ios-telephone-outline"></i>
+						<span>Telemóvel: +880-31-000-000</span>
+					</div>
+					
+					<div class="con-info clearfix">
+						<i class="tf-ion-iphone"></i>
+						<span>Fax: +880-31-000-000</span>
+					</div>-->
+					
+					<div class="con-info clearfix">
+						<i class="tf-ion-ios-email-outline"></i>
+						<span>Email: geral@flowy.pt</span>
+					</div>
+				</div>
+			</div>
+			<!-- / End Contact Details -->
+				
+			<!-- Contact Form -->
+			<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+				<form id="contact-form" method="post" action="sendmail.php" role="form">
+				
+					<div class="form-group">
+						<input type="text" placeholder="Nome" class="form-control" name="name" id="name">
+					</div>
+					
+					<div class="form-group">
+						<input type="email" placeholder="Email" class="form-control" name="email" id="email">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" placeholder="Assunto" class="form-control" name="subject" id="subject">
+					</div>
+					
+					<div class="form-group">
+						<textarea rows="6" placeholder="Menssagem" class="form-control" name="message" id="message"></textarea>	
+					</div>
+					
+					<div id="mail-success" class="success">
+						Obrigado. O carteiro está a caminho! :)
+					</div>
+					
+					<div id="mail-fail" class="error">
+						Pedimos desculpa, ocurreu um erro. Tente mais tarde :(
+					</div>
+					
+					<div id="cf-submit">
+						<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submeter">
+					</div>						
+					
+				</form>
+			</div>
+			<!-- ./End Contact Form -->
+		
+		</div> <!-- end row -->
+	</div> <!-- end container -->
+	
+	<!-- Google Map --> <!--
+	<div class="google-map">
+		<div id="map-canvas"></div>
+	</div>	-->
+	<!-- /Google Map -->
+	
+</section> <!-- end section -->
+	
+
+<!-- end Contact Area
+		========================================== -->
+
+<footer id="footer" class="bg-one">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-lg-12">
+
+				<!-- Footer Social Links -->
+				<div class="social-icon">
+					<ul class="list-inline">
+						<li><a href="https://facebook.com/"><i class="tf-ion-social-facebook"></i></a></li>
+						<li><a href="https://twitter.com/"><i class="tf-ion-social-twitter"></i></a></li>
+						<li><a href="https://www.youtube.com/"><i class="tf-ion-social-youtube"></i></a></li>
+						<li><a href="https://instagram.com/"><i class="tf-ion-social-instagram-outline"></i></a></li>
+						<li><a href="https://linkedin.com/themefisher"><i class="tf-ion-social-linkedin-outline"></i></a></li>
+					</ul>
+				</div>
+				<!--/. End Footer Social Links -->
+
+				<!-- copyright -->
+				<div class="copyright text-center">
+					<a href="index.html">
+						<img src="images/logo.png" height="30px" alt="Meghna" />
+						
+					</a>
+					<br />
+
+					<p>Copyright
+						&copy; <script>
+							document.write(new Date().getFullYear())
+						</script>. All Rights Reserved.</p>
+				</div>
+				<!-- /copyright -->
+
+			</div> <!-- end col lg 12 -->
+		</div> <!-- end row -->
+	</div> <!-- end container -->
+</footer> <!-- end footer -->
+	    
+		
+		
+		
+		
+		
+		
+		
+
+
+		<!-- 
+		Essential Scripts
+		=====================================-->
+		
+		<!-- Main jQuery -->
+		<script type="text/javascript" src="plugins/jquery/dist/jquery.min.js"></script>
+		<!-- Bootstrap 3.1 -->
+		<script type="text/javascript" src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Slick Carousel -->
+		<script type="text/javascript" src="plugins/slick-carousel/slick/slick.min.js"></script>
+		<!-- Portfolio Filtering -->
+		<script type="text/javascript" src="plugins/filterzr/jquery.filterizr.min.js"></script>
+		<!-- Smooth Scroll -->
+		<script type="text/javascript" src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+		<!-- Magnific popup -->
+		<script type="text/javascript" src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<!-- Google Map API -->
+		<script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+		<!-- Sticky Nav -->
+		<script type="text/javascript" src="plugins/Sticky/jquery.sticky.js"></script>
+		<!-- Number Counter Script -->
+		<script type="text/javascript" src="plugins/count-to/jquery.countTo.js"></script>
+		<!-- wow.min Script -->
+		<script type="text/javascript" src="plugins/wow/dist/wow.min.js"></script>
+		<!-- Custom js -->
+		<script type="text/javascript" src="js/script.js"></script>
+		
+    </body>
 </html>
